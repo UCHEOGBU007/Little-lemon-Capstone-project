@@ -6,7 +6,11 @@ import "./App.css";
 function App() {
   const [count, setCount] = useState(0);
 
-  return <></>;
+  return (
+    <div>
+      <h1>Hellow world</h1>
+    </div>
+  );
 }
 
 export default App;
