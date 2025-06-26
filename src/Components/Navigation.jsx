@@ -1,6 +1,7 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import App from "./App.jsx";
+import { BrowserRouter, Router, Routes, Route, Link } from "react-router-dom";
+import App from "../App.jsx";
+
 import Menu from "./Components/Menu.jsx";
 import About from "./Components/Aboutjsx";
 import Contact from "./Components/Contact.jsx";
@@ -9,7 +10,7 @@ import Reservation from "./Components/Reservation.jsx";
 
 const Navigation = () => {
   return (
-    <router>
+    <Router>
       <nav>
         <ul>
           <li>
@@ -46,7 +47,7 @@ const Navigation = () => {
         <Route path="/menu" element={<Menu />} />
         <Route path="/reservation" element={<Reservation />} />
       </Routes>
-    </router>
+    </Router>
   );
 };
 
