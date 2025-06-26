@@ -3,11 +3,8 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import App from "./App.jsx";
 import Menu from "./Components/Menu.jsx";
 import About from "./Components/Aboutjsx";
-
 import Contact from "./Components/Contact.jsx";
-
 import Order from "./Components/Order-online.jsx";
-
 import Reservation from "./Components/Reservation.jsx";
 
 const Navigation = () => {
@@ -43,11 +40,11 @@ const Navigation = () => {
       </nav>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/About" element={<About />} />
-        <Route path="/CONTACT US" element={<Contact />} />
-        <Route path="/ORDER-ONLINE" element={<Order />} />
-        <Route path="/MENU" element={<Menu />} />
-        <Route path="/RESERVATION" element={<Reservation />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact-us" element={<Contact />} />
+        <Route path="/order-online" element={<Order />} />
+        <Route path="/menu" element={<Menu />} />
+        <Route path="/reservation" element={<Reservation />} />
       </Routes>
     </router>
   );
