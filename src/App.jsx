@@ -1,11 +1,9 @@
-import Navbar from "./Components/Navbar";
-import Herosection from "./Components/Herosection";
+import Navigation from "./Components/Navigation.jsx";
 
 function App() {
   return (
     <>
-      <Navbar />
-      <Herosection />
+      <Navigation />
     </>
   );
 }
