@@ -7,13 +7,13 @@ const Hero = () => {
       style={{
         background: "#495E58",
         width: "100%",
-        maxHeight: "500px",
+        maxHeight: "450px",
         padding: "40px",
         display: "flex",
         justifyContent: "space-between",
       }}
     >
-      <div style={{ maxWidth: "500px", margin: "100px 0 0 100px" }}>
+      <div style={{ maxWidth: "500px", margin: "50px 0 0 100px" }}>
         <h2
           style={{
             color: "#F4CE14",
@@ -64,7 +64,7 @@ const Hero = () => {
           src="/Hero.jpg"
           alt="Hero Images"
           style={{
-            height: "550px",
+            height: "480px",
             width: "400.08px",
             borderRadius: "15px",
             marginRight: "100px",
