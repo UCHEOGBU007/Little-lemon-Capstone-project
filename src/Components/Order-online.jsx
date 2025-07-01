@@ -4,4 +4,4 @@ const Order = () => {
   return <div>Order-online</div>;
 };
 
-export default Order - online;
+export default Order;
