@@ -62,7 +62,7 @@ const Navigation = () => {
       <nav>
         <ul>
           <li>
-            <Link to="/">HOME</Link>
+            <Link to="/Home">HOME</Link>
           </li>
           <li>
             <Link to="/About">ABOUT</Link>
@@ -71,7 +71,7 @@ const Navigation = () => {
             <Link to="/Contact">CONTACT US</Link>
           </li>
           <li>
-            <Link to="/Order-online">ORDER ONLINE</Link>
+            <Link to="/Order">ORDER ONLINE</Link>
           </li>
           <li>
             <Link to="/Menu">MENU</Link>

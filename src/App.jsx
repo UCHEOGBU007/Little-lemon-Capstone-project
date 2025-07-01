@@ -7,19 +7,21 @@ import Home from "./Components/Home.jsx";
 import Reservation from "./Components/Reservation";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
+import PageNotFound from "./Components/PageNotFound.jsx";
 
 function App() {
   return (
     <div>
-      <Navigation />
       <BrowserRouter>
+        <Navigation />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact-us" element={<Contact />} />
+          <Route path="/Home" element={<Home />} />
+          <Route path="/About" element={<About />} />
+          <Route path="/Contact" element={<Contact />} />
           <Route path="/Order" element={<Order />} />
-          <Route path="/menu" element={<Menu />} />
-          <Route path="/reservation" element={<Reservation />} />
+          <Route path="/Menu" element={<Menu />} />
+          <Route path="/Reservation" element={<Reservation />} />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>
     </div>
