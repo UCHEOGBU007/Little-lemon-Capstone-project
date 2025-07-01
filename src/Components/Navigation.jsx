@@ -1,87 +1,50 @@
-// import React from "react";
-// import { BrowserRouter, Router, Routes, Route, Link } from "react-router-dom";
-// import App from "../App.jsx";
-
-// import Menu from "./src/Components/Menu.jsx";
-// import About from "./src/Components/Aboutjsx";
-// import Contact from "./src/Components/Contact.jsx";
-// import Order from "./src/Components/Order-online.jsx";
-// import Reservation from "./src/Components/Reservation.jsx";
-
-// const Navigation = () => {
-//   return (
-//     <Router>
-//       <nav>
-//         <ul>
-//           <li>
-//             {" "}
-//             <Link to="/Home">HOME </Link>
-//           </li>
-
-//           <li>
-//             <Link to="/About">ABOUT</Link>
-//           </li>
-
-//           <li>
-//             <Link to="/Contact-us">CONTACT US</Link>
-//           </li>
-
-//           <li>
-//             <Link to="/Order-online">ORDER-ONLINE</Link>
-//           </li>
-
-//           <li>
-//             <Link to="/Menu">MENU</Link>
-//           </li>
-
-//           <li>
-//             <Link to="/Reservation">RESERVATION</Link>
-//           </li>
-//         </ul>
-//       </nav>
-//       <Routes>
-//         <Route path="/Home" element={<App />} />
-//         <Route path="/About" element={<About />} />
-//         <Route path="/Contact-us" element={<Contact />} />
-//         <Route path="/Order-online" element={<Order />} />
-//         <Route path="/Menu" element={<Menu />} />
-//         <Route path="/Reservation" element={<Reservation />} />
-//       </Routes>
-//     </Router>
-//   );
-// };
-
-// export default Navigation;
-
 import React from "react";
 import { Link } from "react-router-dom";
+import Styles from "../Css/Navigation.module.css";
+import "../Css/Navigation.module.css";
 
 const Navigation = () => {
   return (
-    <div>
-      <nav>
+    <header className={Styles.header}>
+      <nav className={Styles.nav}>
+        <div className={Styles.logo}>
+          {" "}
+          <img src="/Logo.jpg" alt="Little lemon Logo" />
+        </div>
         <ul>
           <li>
-            <Link to="/Home">HOME</Link>
+            <Link to="/Home" className={Styles.link}>
+              HOME
+            </Link>
           </li>
           <li>
-            <Link to="/About">ABOUT</Link>
+            <Link to="/About" className={Styles.link}>
+              ABOUT
+            </Link>
           </li>
           <li>
-            <Link to="/Contact">CONTACT US</Link>
+            <Link to="/Contact" className={Styles.link}>
+              CONTACT US
+            </Link>
           </li>
           <li>
-            <Link to="/Order">ORDER ONLINE</Link>
+            <Link to="/Order" className={Styles.link}>
+              ORDER ONLINE
+            </Link>
           </li>
           <li>
-            <Link to="/Menu">MENU</Link>
+            <Link to="/Menu" className={Styles.link}>
+              MENU
+            </Link>
           </li>
           <li>
-            <Link to="/Reservation">RESERVATION</Link>
+            <Link to="/Reservation" className={Styles.link}>
+              RESERVATION
+            </Link>
           </li>
         </ul>
       </nav>
-    </div>
+    </header>
   );
 };
 
