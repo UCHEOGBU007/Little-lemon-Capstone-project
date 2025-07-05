@@ -13,23 +13,13 @@ const Navigation = () => {
         </div>
         <ul>
           <li>
-            <Link to="/Home" className={Styles.link}>
+            <Link to="/" className={Styles.link}>
               HOME
             </Link>
           </li>
           <li>
             <Link to="/About" className={Styles.link}>
               ABOUT
-            </Link>
-          </li>
-          <li>
-            <Link to="/Contact" className={Styles.link}>
-              CONTACT US
-            </Link>
-          </li>
-          <li>
-            <Link to="/Order" className={Styles.link}>
-              ORDER ONLINE
             </Link>
           </li>
           <li>
@@ -40,6 +30,11 @@ const Navigation = () => {
           <li>
             <Link to="/Reservation" className={Styles.link}>
               RESERVATION
+            </Link>
+          </li>
+          <li>
+            <Link to="/Order" className={Styles.order}>
+              ONLINE-ORDER
             </Link>
           </li>
         </ul>

@@ -59,15 +59,14 @@ const Hero = () => {
 
       {/* image beside hero section and it's size and height  */}
 
-      <div>
+      <div style={{ transform: "translateY(-41px)", marginRight: "100px" }}>
         <img
           src="/Hero.jpg"
           alt="Hero Images"
           style={{
             height: "480px",
             width: "400.08px",
-            borderRadius: "15px",
-            marginRight: "100px",
+            borderRadius: "0 0 10px 10px ",
           }}
         />
       </div>

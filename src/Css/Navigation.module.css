@@ -39,15 +39,20 @@ ul li {
   padding: 0 1em;
 }
 
-ul li :hover {
-  text-decoration: underline;
-  text-decoration-color: #00adb5;
-  text-decoration-thickness: 0.2rem;
-  border-radius: 3px;
-}
-
 .link {
   text-decoration: none;
   color: #495e57;
   font-weight: bolder;
+}
+
+.order {
+  text-decoration: none;
+  color: #eeeeee;
+  font-weight: bolder;
+  background-color: #495e57;
+  padding: 5px;
+  border-radius: 10px;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
 }
