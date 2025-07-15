@@ -51,6 +51,7 @@ const Hero = () => {
             padding: "10px",
             borderRadius: "8px",
             fontWeight: "bolder",
+            cursor: "pointer",
           }}
         >
           Reserve a table

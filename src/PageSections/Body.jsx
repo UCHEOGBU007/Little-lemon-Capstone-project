@@ -1,6 +1,5 @@
-import React from "react";
 import { Link } from "react-router-dom";
-import Order from "../Components/Order-online";
+import Style from "../Css/BodyHeader.module.css";
 
 const Body = () => {
   return (
@@ -9,109 +8,77 @@ const Body = () => {
         style={{
           display: "flex",
           alignItems: "center",
-          justifyContent: "space-between",
-          margin: "5em",
+          justifyContent: "center",
+          margin: "6em ",
+          padding: "0 2em",
+          gap: "78%",
         }}
       >
-        <h2>Specials</h2> <Link to="/Menu">Order Online</Link>
+        <h2 className={Style.homebodyheader}>Specials</h2>{" "}
+        <Link to="/Menu" className={Style.link}>
+          Order Online
+        </Link>
       </div>
 
-      {/* First Menu card  starts here*/}
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(3, 1fr)" /* Three equal columns */,
-          gap: "2rem" /* Space between cards */,
-          padding: "2rem",
-        }}
-      >
-        <div
-          style={{
-            backgroundColor: "#f7f7f7",
-            borderRadius: "8px",
-            boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-            padding: "1rem",
-            textAlign: "center",
-          }}
-        >
-          <figure style={{ margin: "0" }}>
-            <div>
-              <img
-                src="/Pasta.jpg"
-                alt="Picture description"
-                style={{ maxWidth: "100%", borderRadius: "4px" }}
-              />
-            </div>
-            <figcaption>
-              <div>
-                <h5>
-                  Spagheti <span>$100</span>
-                </h5>
-              </div>
-              <p></p>
-              <Link to="/Menu" />
-            </figcaption>
-          </figure>
+      {/* Card container starts here */}
+      <div className={Style.container}>
+        {/* First menu card Starts here  */}
+        <div className={Style.menuCard}>
+          <img src="/Pasta.jpg" alt="Spaghetti" />
+          <h5>
+            Spaghetti <span>$100</span>
+          </h5>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipiscing elit quisque
+            faucibus ex sapien vitae pellentesque sem placerat in id cursus mi.
+          </p>
+          <Link to="/Menu" className={Style.linkmenu}>
+            Read More
+          </Link>
         </div>
+
         {/* Second Menu card  starts here*/}
-
-        <div
-          style={{
-            backgroundColor: "#f7f7f7",
-            borderRadius: "8px",
-            boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-            padding: "1rem",
-            textAlign: "center",
-          }}
-        >
-          <figure style={{ margin: "0" }}>
-            <div>
-              <img
-                src="/Salad.jpg"
-                alt="Picture description"
-                style={{ maxWidth: "100%", borderRadius: "4px" }}
-              />
-            </div>
-            <figcaption>
-              <div>
-                <h5>
-                  Salad <span>$85</span>
-                </h5>
-              </div>
-              <p></p>
-              <p></p>
-            </figcaption>
-          </figure>
+        <div className={Style.menuCard}>
+          <img src="/Salad.jpg" alt="Salad" />
+          <h5>
+            Salad <span>$85</span>
+          </h5>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipiscing elit quisque
+            faucibus ex sapien vitae pellentesque sem placerat in id cursus mi.
+          </p>
+          <Link to="/Menu" className={Style.linkmenu}>
+            Read More
+          </Link>
         </div>
 
-        {/* Third Menu card  */}
-        <div
-          style={{
-            backgroundColor: "#f7f7f7",
-            borderRadius: "8px",
-            boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-            padding: "1rem",
-            textAlign: "center",
-          }}
-        >
-          <figure style={{ margin: "0" }}>
-            <div>
-              <img
-                src="/TomatoesStew.jpg"
-                alt="Picture description"
-                Style={{ maxWidth: "100%", borderRadius: "4px" }}
-              />
-            </div>
-            <figcaption>
-              <div>
-                <h5>
-                  Tomato Sauce <span>$150</span>
-                </h5>
-              </div>
-              <p></p>
-              <p></p>
-            </figcaption>
-          </figure>
+        {/* Third Menu card  starts here*/}
+        <div className={Style.menuCard}>
+          <img src="/TomatoesStew.jpg" alt="Tomato Sauce" />
+          <h5>
+            Tomato Sauce <span>$150</span>
+          </h5>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipiscing elit quisque
+            faucibus ex sapien vitae pellentesque sem placerat in id cursus mi.
+          </p>
+          <Link to="/Menu" className={Style.linkmenu}>
+            Read More
+          </Link>
+        </div>
+        {/* Foruth card of menu  */}
+        <div className={Style.menuCard}>
+          <img src="/Salad.jpg" alt="Salad" />
+          <h5>
+            Salad <span>$85</span>
+          </h5>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipiscing elit quisque
+            faucibus ex sapien vitae pellentesque sem placerat in id cursus mi.
+          </p>
+          <Link to="/Menu" className={Style.linkmenu}>
+            Read More
+          </Link>
         </div>
       </div>
     </section>
