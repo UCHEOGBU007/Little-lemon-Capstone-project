@@ -69,6 +69,10 @@
   color: #000000;
 }
 
+.arrow {
+  margin-top: 2px;
+}
+
 .menuCard .linkmenu:hover {
   color: #ee9972;
   cursor: pointer;

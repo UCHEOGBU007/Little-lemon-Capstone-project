@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Style from "../Css/BodyHeader.module.css";
+import { FaArrowRight } from "react-icons/fa";
 
 const Body = () => {
   return (
@@ -33,7 +34,10 @@ const Body = () => {
             faucibus ex sapien vitae pellentesque sem placerat in id cursus mi.
           </p>
           <Link to="/Menu" className={Style.linkmenu}>
-            Read More
+            Read More{" "}
+            <span className={Style.arrow}>
+              <FaArrowRight />
+            </span>
           </Link>
         </div>
 
@@ -49,6 +53,9 @@ const Body = () => {
           </p>
           <Link to="/Menu" className={Style.linkmenu}>
             Read More
+            <span className={Style.arrow}>
+              <FaArrowRight />
+            </span>
           </Link>
         </div>
 
@@ -64,6 +71,9 @@ const Body = () => {
           </p>
           <Link to="/Menu" className={Style.linkmenu}>
             Read More
+            <span className={Style.arrow}>
+              <FaArrowRight />
+            </span>
           </Link>
         </div>
         {/* Foruth card of menu  */}
@@ -78,6 +88,9 @@ const Body = () => {
           </p>
           <Link to="/Menu" className={Style.linkmenu}>
             Read More
+            <span className={Style.arrow}>
+              <FaArrowRight />
+            </span>
           </Link>
         </div>
       </div>
