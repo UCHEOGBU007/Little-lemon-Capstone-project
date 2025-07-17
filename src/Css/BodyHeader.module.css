@@ -1,3 +1,5 @@
+/* designing the header links  */
+
 .link {
   color: #333333;
   background: linear-gradient(135deg, #faaa16, #face14);
@@ -19,12 +21,16 @@
   font-size: 1.9em;
 }
 
+/* Card Container style starts here */
+
 .container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
   gap: 3em;
 }
+
+/* cards starts here*/
 
 .menuCard {
   /* background-color: #f7f7f7; */
@@ -77,6 +83,8 @@
   color: #ee9972;
   cursor: pointer;
 }
+
+/*Mobile responsiveness starts here */
 
 @media (max-width: 768px) {
   .container {

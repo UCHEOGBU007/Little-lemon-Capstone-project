@@ -4,6 +4,8 @@ import { FaArrowRight } from "react-icons/fa";
 
 const Body = () => {
   return (
+    // body section
+
     <section>
       <div
         style={{
