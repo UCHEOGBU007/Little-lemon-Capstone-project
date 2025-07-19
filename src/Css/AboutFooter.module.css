@@ -1,0 +1,66 @@
+/* Container styling with H4 tags and Paragraph tag*/
+
+.container {
+  margin-top: 5em;
+  display: flex;
+  justify-content: space-between;
+  padding: 4em;
+}
+
+.introduction h4 {
+  color: #f4ce14;
+  font-family: "Abril Fatface";
+  font-size: 2.5em;
+}
+
+.introduction h4 span {
+  color: #333333;
+  opacity: 0.8;
+  font-size: large;
+}
+
+.introduction p {
+  width: 500px;
+  word-wrap: break-word;
+  margin-top: 2em;
+  font-weight: 100;
+  color: #333333;
+}
+
+/* Designing Images  and position pattern */
+
+.imgcontainer {
+  position: relative;
+  margin-right: 25em;
+  margin-top: 3em;
+}
+
+.img1 {
+  width: 410px;
+  height: 515px;
+  transform: scaleX(-1);
+  border-radius: 10px;
+}
+
+.img2 {
+  position: absolute;
+  bottom: 10em;
+  left: 270px;
+  width: 425px;
+  height: 480px;
+  border-radius: 10px;
+
+  z-index: 1;
+}
+
+/*Mobile responsiveness starts here */
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+  }
+}

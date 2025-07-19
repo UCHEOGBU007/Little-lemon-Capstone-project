@@ -11,8 +11,8 @@ import Footer from "./Components/Footer.jsx";
 
 function App() {
   return (
-    <div>
-      <BrowserRouter>
+    <BrowserRouter>
+      <div>
         <Navigation />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -22,10 +22,10 @@ function App() {
           <Route path="/Order" element={<Order />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
-      </BrowserRouter>
-      <br />
-      <Footer />
-    </div>
+        <br />
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 
