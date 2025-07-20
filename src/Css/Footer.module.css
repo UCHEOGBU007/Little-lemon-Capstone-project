@@ -1,4 +1,4 @@
-/* .footercontainer {
+.footercontainer {
   height: 260px;
   background-color: #d9d9d9;
   display: flex;
@@ -7,53 +7,64 @@
   padding: 3em;
 }
 
-.footercontainer nav ul li {
-  flex-direction: row;
-} */
+.footercontainer img {
+  height: 190px;
+  width: 130px;
+}
 
-.footercontainer {
+.section h5 {
+  font-size: larger;
+  font-weight: bolder;
+  color: #333333;
+}
+
+.section ul {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  padding: 20px;
-  background-color: #d9d9d9;
-  /* color: white; */
-  gap: 40px;
-}
-
-.logo {
-  max-width: 120px;
-}
-
-.section {
-  flex: 1;
-  min-width: 150px;
+  flex-direction: column;
+  padding: 10px;
+  margin: 10px;
 }
 
 .link {
-  color: #eee;
-  text-decoration: none; /* Removes underline */
-  display: inline-block;
-  margin: 5px 0;
+  text-decoration: none;
+  color: #495e57;
+  margin-left: 5px;
+  padding: 5px;
 }
 
 .link:hover {
-  color: #ffcc00; /* Optional: adds hover color */
-  text-decoration: underline; /* Optional: shows underline on hover */
+  color: #faaa16;
+  background: #333333;
+  border-radius: 5px;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
+/*Footer contacts Styling starts here */
+
+.footercontainer address {
+  display: flex;
+  flex-direction: column;
 }
 
-h5 {
-  margin-bottom: 10px;
-  color: #ffcc00;
-}
-
-a {
+.footercontainer address a {
+  margin-top: 15px;
+  font-weight: bolder;
+  color: #495e57;
   text-decoration: none;
-  color: inherit;
+}
+
+.footercontainer address a:hover {
+  color: #faaa16;
+  background: #333333;
+  border-radius: 5px;
+}
+
+.copyright {
+  background: #293632;
+  color: #faaa16;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-align: center;
+  justify-items: center;
+  height: 60px;
+  padding-top: 20px;
 }

@@ -47,6 +47,14 @@ ul li {
   font-weight: bolder;
 }
 
+.link:hover {
+  color: #faaa16;
+  background: #333333;
+  padding: 5px;
+  /* color: linear-gradient(135deg, #faaa16, #face14); */
+  border-radius: 5px;
+}
+
 .order {
   text-decoration: none;
   color: #eeeeee;
@@ -57,4 +65,9 @@ ul li {
   border: none;
   text-decoration: none;
   cursor: pointer;
+}
+
+.order:hover {
+  color: #faaa16;
+  background: #333333;
 }
