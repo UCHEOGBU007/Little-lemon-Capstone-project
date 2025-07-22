@@ -33,6 +33,7 @@ const Reservation = () => {
       }
 
       const data = await response.json();
+      console.log("Data was successfully submitted", data);
       alert("Sucessful Reservation");
 
       // Reset form after success
