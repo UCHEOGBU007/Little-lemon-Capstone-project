@@ -1,18 +1,62 @@
-import React from "react";
+import React, { useState } from "react";
 import Style from "../Css/Reservation.module.css";
 import Testimonies from "../PageSections/Testimonies.jsx";
 
 const Reservation = () => {
-  const Form = (e) => {
+  const [reservation, setReservation] = useState({
+    Name: "",
+    date: "",
+    guests: "",
+    occasion: "",
+    seating: "",
+    email: "",
+    phone: "",
+  });
+
+  /*  post data using asyn api fetch function */
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
+    try {
+      const response = await fetch("https://httpbin.org/post", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(reservation),
+      });
+      if (!response.ok) {
+        throw new Error("Please wait a moment for loading...");
+      }
+
+      const data = await response.json();
+      console.log("Reservation Submitted Successfully:", data);
+
+      // Reset form after success
+      setReservation({
+        Name: "",
+        date: "",
+        guests: "",
+        occasion: "",
+        seating: "",
+        email: "",
+        phone: "",
+      });
+    } catch (error) {
+      console.error("Error submitting reservation:", error);
+    }
   };
+
   return (
     <>
       <section className={Style.container}>
         <div className={Style.header}>
-          <h4>BOOK A RESERVATION</h4>
+          <img src="/restaurant.jpg" alt="" />
         </div>
-        <form onSubmit={Form}>
+
+        <h4>BOOK A RESERVATION </h4>
+        <form onSubmit={handleSubmit}>
           <fieldset>
             <legend>Reservation Details</legend>
 
@@ -23,6 +67,10 @@ const Reservation = () => {
               name="name"
               placeholder="Full Name"
               required
+              value={reservation.Name}
+              onChange={(e) =>
+                setReservation({ ...reservation, Name: e.target.value })
+              }
             />
 
             <label htmlFor="date">Date:</label>
@@ -32,6 +80,10 @@ const Reservation = () => {
               name="date"
               placeholder="Date"
               required
+              value={reservation.date}
+              onChange={(e) =>
+                setReservation({ ...reservation, date: e.target.value })
+              }
             />
 
             <label htmlFor="guests">Number of Guests:</label>
@@ -42,10 +94,21 @@ const Reservation = () => {
               min="1"
               placeholder="Choose Number of guest"
               required
+              value={reservation.guests}
+              onChange={(e) =>
+                setReservation({ ...reservation, guests: e.target.value })
+              }
             />
 
             <label htmlFor="Event">Occasion:</label>
-            <select name="Events" id="Events">
+            <select
+              name="Events"
+              id="Events"
+              value={reservation.occasion}
+              onChange={(e) =>
+                setReservation({ ...reservation, occasion: e.target.value })
+              }
+            >
               <option value="" disabled selected>
                 {" "}
                 -- Choose Occasion --{" "}
@@ -58,10 +121,28 @@ const Reservation = () => {
             <br />
             <div className={Style.radiobox}>
               <label htmlFor="seating">Indoor:</label>
-              <input type="radio" name="seating" value="indoor" required />
+              <input
+                type="radio"
+                id="indoor"
+                name="seating"
+                value="indoor"
+                checked={reservation.seating === "indoor"}
+                onChange={(e) =>
+                  setReservation({ ...reservation, seating: e.target.value })
+                }
+              />
 
               <label htmlFor="seating">outdoor:</label>
-              <input type="radio" name="seating" value="outdoor" required />
+              <input
+                type="radio"
+                id="outdoor"
+                name="seating"
+                value="outdoor"
+                checked={reservation.seating === "outdoor"}
+                onChange={(e) =>
+                  setReservation({ ...reservation, seating: e.target.value })
+                }
+              />
             </div>
           </fieldset>
 
@@ -75,6 +156,10 @@ const Reservation = () => {
               name="email"
               placeholder="Email Address"
               required
+              value={reservation.email}
+              onChange={(e) =>
+                setReservation({ ...reservation, email: e.target.value })
+              }
             />
 
             <label htmlFor="phone">Phone:</label>
@@ -84,6 +169,10 @@ const Reservation = () => {
               name="phone"
               placeholder="Phone Number"
               required
+              value={reservation.phone}
+              onChange={(e) =>
+                setReservation({ ...reservation, phone: e.target.value })
+              }
             />
           </fieldset>
 

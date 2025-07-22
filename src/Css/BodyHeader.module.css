@@ -35,10 +35,14 @@
 .menuCard {
   /* background-color: #f7f7f7; */
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
   padding: 1rem;
   text-align: center;
   margin-bottom: 2rem;
+}
+
+.menuCard:hover {
+  box-shadow: 0 6px 8px rgba(146, 102, 102, 0.1);
 }
 
 .menuCard img {
