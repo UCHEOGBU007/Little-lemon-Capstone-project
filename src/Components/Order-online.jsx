@@ -1,7 +1,12 @@
 import React from "react";
+import PageNotFound from "./PageNotFound";
 
 const Order = () => {
-  return <div>Order-online</div>;
+  return (
+    <>
+      <PageNotFound />
+    </>
+  );
 };
 
 export default Order;

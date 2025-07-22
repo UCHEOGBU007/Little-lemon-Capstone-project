@@ -1,7 +1,18 @@
 import React from "react";
+import AboutFooter from "../PageSections/AboutFooter";
+import Style from "../Css/AboutComponent.module.css";
 
 const About = () => {
-  return <div>About</div>;
+  return (
+    <>
+      <section className={Style.about}>
+        <img src="/Mario.jpg" alt="Pictures" />
+      </section>
+      <div>
+        <AboutFooter />
+      </div>
+    </>
+  );
 };
 
 export default About;

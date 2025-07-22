@@ -10,24 +10,29 @@
 .header h4 {
   justify-items: center;
   text-align: center;
-  font-size: 2em;
-  padding-top: 5.8em;
-  /* color: black; */
-  color: #d6700a;
+  font-size: 5em;
+  padding-top: 2em;
+  color: black;
+}
+
+.container form {
+  margin: 0 auto;
+  width: 50em;
+  margin-top: 4em;
 }
 
 .container form fieldset {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  margin: 0 auto;
+  border: solid;
+  border-color: #865d11 #faaa16;
   padding: 20px;
-  margin: 20px;
-  max-width: 500px;
+  margin-top: 10px;
 }
 
 .container form fieldset legend {
   font-size: 2em;
-  color: #faaa16;
+  color: #495e57;
   font-weight: bolder;
 }
 
@@ -35,6 +40,52 @@
   font-weight: bolder;
 }
 
+.container form fieldset input {
+  padding: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.container form select {
+  padding: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.container form select option {
+  cursor: pointer;
+  color: #495e57;
+  background-color: rgb(193, 190, 190);
+  font-weight: 600;
+}
+
+.container form select option:nth-child(1) {
+  background-color: #faaa16;
+  opacity: 0.6;
+}
+
 .container form button {
+  color: #495e57;
+  width: 100%;
+  margin-top: 8px;
+  padding: 10px 30px 10px 30px;
+  border-color: #faaa16;
+  border-radius: 5px;
+  font-size: larger;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.container form button:hover {
+  background-color: #495e57;
   color: #faaa16;
+}
+
+.radiobox label {
+  margin: 15px;
+}
+
+.radiobox input[type="radio"] {
+  padding-top: 10px;
+  font-size: xx-large;
 }
