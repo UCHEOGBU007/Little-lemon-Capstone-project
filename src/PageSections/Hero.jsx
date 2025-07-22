@@ -1,5 +1,5 @@
 import React from "react";
-import Style from "../css/Hero.module.css";
+import Style from "../Css/Hero.module.css";
 import { Link } from "react-router-dom";
 
 const Hero = () => {
