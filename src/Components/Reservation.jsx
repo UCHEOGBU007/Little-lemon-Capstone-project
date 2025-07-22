@@ -3,6 +3,8 @@ import Style from "../Css/Reservation.module.css";
 import Testimonies from "../PageSections/Testimonies.jsx";
 
 const Reservation = () => {
+  // state declaration
+
   const [reservation, setReservation] = useState({
     Name: "",
     date: "",
@@ -34,6 +36,7 @@ const Reservation = () => {
       console.log("Reservation Submitted Successfully:", data);
 
       // Reset form after success
+
       setReservation({
         Name: "",
         date: "",
@@ -48,6 +51,8 @@ const Reservation = () => {
     }
   };
 
+  /* Form component */
+
   return (
     <>
       <section className={Style.container}>
@@ -56,6 +61,9 @@ const Reservation = () => {
         </div>
 
         <h4>BOOK A RESERVATION </h4>
+
+        {/* Form starts here */}
+
         <form onSubmit={handleSubmit}>
           <fieldset>
             <legend>Reservation Details</legend>
@@ -178,6 +186,8 @@ const Reservation = () => {
 
           <button type="submit">Reserve Now</button>
         </form>
+
+        {/* Form ends here */}
       </section>
       <Testimonies />
     </>

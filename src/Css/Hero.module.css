@@ -1,0 +1,108 @@
+/* Base styling for main hero section */
+.hero {
+  background: #495e58;
+  width: 100%;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.herotext {
+  max-width: 500px;
+  margin: 50px 0 0 20px;
+}
+
+.herotext h2 {
+  color: #f4ce14;
+  font-family: "Abril Fatface", cursive;
+  font-size: 3rem;
+  margin: 0;
+}
+
+.herotext p.subtitle {
+  color: #edefee;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.herotext p.description {
+  margin-top: 60px;
+  color: #edefee;
+  font-weight: bold;
+}
+
+.herotext button {
+  background: linear-gradient(135deg, #faaa16, #face14);
+  margin-top: 30px;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.button {
+  text-decoration: none;
+  color: #495e58;
+  font-weight: bolder;
+}
+
+.herotext .button:hover {
+  background: #495e58;
+  color: #faaa16;
+}
+
+.heroimage {
+  transform: translateY(-41px);
+  margin-right: 20px;
+}
+
+.heroimage img {
+  height: 480px;
+  /* width: 100%; */
+  max-width: 450px;
+  border-radius: 0 0 10px 10px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 890px) {
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .herotext {
+    margin: 0;
+  }
+
+  .herotext h2 {
+    font-size: 2rem;
+  }
+
+  .herotext p.description {
+    margin-top: 20px;
+    font-size: 0.95rem;
+  }
+
+  .herotext button {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  .heroimage {
+    margin: 20px 0 0 0;
+    transform: none;
+    width: 100%;
+  }
+
+  .heroimage img {
+    /* max-height: 500px; */
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 12px;
+  }
+}

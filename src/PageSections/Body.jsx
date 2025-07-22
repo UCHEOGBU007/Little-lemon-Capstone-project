@@ -7,19 +7,11 @@ const Body = () => {
     // body section
 
     <section>
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          margin: "6em ",
-          padding: "0 2em",
-          gap: "78%",
-        }}
-      >
-        <h2 className={Style.homebodyheader}>Specials</h2>{" "}
+      <div className={Style.Bodycontainer}>
+        <h2 className={Style.homebodyheader}>Specials</h2>
+
         <Link to="/Menu" className={Style.link}>
-          Order Online
+          Orders
         </Link>
       </div>
 

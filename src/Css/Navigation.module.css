@@ -71,3 +71,52 @@ ul li {
   color: #faaa16;
   background: #333333;
 }
+
+.openmenu {
+  color: #333333;
+  font-size: xx-large;
+  font-weight: bolder;
+  display: none;
+}
+
+.closemenu {
+  color: #333333;
+  font-size: xx-large;
+  font-weight: bolder;
+  display: none;
+}
+
+/* Add these styles */
+
+.menu {
+  display: flex;
+}
+
+@media (max-width: 890px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background-color: #eeeeee;
+    width: 100%;
+    padding: 1rem;
+    z-index: 9;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .show {
+    display: flex;
+  }
+
+  .openmenu {
+    display: block;
+    cursor: pointer;
+  }
+
+  .closemenu {
+    display: block;
+    cursor: pointer;
+  }
+}

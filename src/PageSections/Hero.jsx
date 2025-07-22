@@ -1,36 +1,20 @@
 import React from "react";
+import Style from "../css/Hero.module.css";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
     // Hero main section starts here
-    <main
-      style={{
-        background: "#495E58",
-        width: "100%",
-        maxHeight: "450px",
-        padding: "40px",
-        display: "flex",
-        justifyContent: "space-between",
-      }}
-    >
-      <div style={{ maxWidth: "500px", margin: "50px 0 0 100px" }}>
-        <h2
-          style={{
-            color: "#F4CE14",
-            fontFamily: "Abril Fatface",
-            fontSize: "3rem",
-          }}
-        >
+    <main className={Style.hero}>
+      <div className={Style.herotext}>
+        <h2>
           Little Lemon <br />{" "}
           <span>
-            <p
-              style={{ color: "#edefee", fontSize: "1rem", fontWeight: "bold" }}
-            >
-              Chicago
-            </p>
+            <p className={Style.subtitle}>Chicago</p>
           </span>
         </h2>
-        <p style={{ marginTop: "60px", color: "#edefee", fontWeight: "bold" }}>
+
+        <p className={Style.description}>
           Lorem ipsum dolor sit amet dolor sit adipiscing elit consectetur
           quisque faucibus aucibus ex sapien vitae,Lorem ipsum dolor sit amet,
           consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -40,36 +24,18 @@ const Hero = () => {
 
         {/* Reserve a table button  */}
 
-        <button
-          style={{
-            color: "#495e57",
-            // backgroundColor: "#face14",
-            background: "linear-gradient(135deg, #faaa16, #face14)",
-
-            marginTop: "30px",
-            border: "none",
-            padding: "10px",
-            borderRadius: "8px",
-            fontWeight: "bolder",
-            cursor: "pointer",
-          }}
-        >
-          Reserve a table
+        <button>
+          {" "}
+          <Link to="/Reservation" className={Style.button}>
+            Reserve a table
+          </Link>{" "}
         </button>
       </div>
 
       {/* image beside hero section and it's size and height  */}
 
-      <div style={{ transform: "translateY(-41px)", marginRight: "100px" }}>
-        <img
-          src="/Hero.jpg"
-          alt="Hero Images"
-          style={{
-            height: "480px",
-            width: "400.08px",
-            borderRadius: "0 0 10px 10px ",
-          }}
-        />
+      <div className={Style.heroimage}>
+        <img src="/Hero.jpg" alt="Hero Images" />
       </div>
     </main>
   );
