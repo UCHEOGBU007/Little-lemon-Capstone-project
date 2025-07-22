@@ -8,6 +8,17 @@ const Footer = () => {
       <footer className={Style.footercontainer}>
         <div>
           <img src="/Logofooter1.png" alt="Logo" className={Style.logo} />
+          {/* <form action="">
+            <label htmlFor="newletter"> News Leter :</label>
+            <br />
+            <input
+              type="email"
+              id="email"
+              name="newletter"
+              placeholder="Suscribe"
+            />
+            <input type="submit" />
+          </form> */}
         </div>
 
         <nav className={Style.section}>
@@ -47,10 +58,10 @@ const Footer = () => {
           <a href="mailto:info@yourdomain.com">📧 Email Us</a>
         </address>
 
-        <div className={Style.section}>
+        {/* <div className={Style.section}>
           <h5>SOCIAL MEDIA CONTACTS</h5>
           <p>🌐 Facebook | Instagram | Twitter</p>
-        </div>
+        </div> */}
       </footer>
 
       <div className={Style.copyright}>

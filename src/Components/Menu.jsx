@@ -1,7 +1,12 @@
 import React from "react";
+import PageNotFound from "./PageNotFound.jsx";
 
 const Menu = () => {
-  return <div>Menu</div>;
+  return (
+    <>
+      <PageNotFound />
+    </>
+  );
 };
 
 export default Menu;

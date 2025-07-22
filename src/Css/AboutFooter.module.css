@@ -55,12 +55,63 @@
 
 /*Mobile responsiveness starts here */
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .container {
     flex-direction: column;
     justify-content: center;
     padding: 0;
     margin: 0;
     max-width: 100%;
+  }
+} */
+
+@media (max-width: 890px) {
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em 1em;
+    margin-top: 2em;
+  }
+
+  .introduction h4 {
+    font-size: 2em;
+    text-align: center;
+  }
+
+  .introduction h4 span {
+    font-size: 1rem;
+  }
+
+  .introduction p {
+    width: 100%;
+    max-width: 90%;
+    margin-top: 1.5em;
+    font-size: 0.95rem;
+    text-align: justify;
+  }
+
+  .imgcontainer {
+    position: relative;
+    margin: 2em auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 0;
+  }
+
+  .img1,
+  .img2 {
+    position: static;
+    width: 90%;
+    max-width: 350px;
+    height: auto;
+    margin-bottom: 1em;
+    transform: none;
+    border-radius: 10px;
+  }
+
+  .img2 {
+    z-index: 0;
   }
 }

@@ -68,3 +68,72 @@
   height: 60px;
   padding-top: 20px;
 }
+
+@media (max-width: 890px) {
+  .footercontainer {
+    flex-direction: column;
+
+    height: auto;
+    padding: 2em 1em;
+    text-align: left;
+  }
+
+  .footercontainer img {
+    height: 150px;
+    width: 100px;
+    margin-bottom: 1em;
+  }
+
+  .footercontainer form {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 1.5em;
+  }
+
+  .footercontainer label,
+  .footercontainer input {
+    display: block;
+    width: 100%;
+    font-size: 0.9rem;
+    margin-top: 0.5em;
+  }
+
+  .section {
+    margin-bottom: 2em;
+    width: 100%;
+    max-width: 300px;
+    text-align: left;
+  }
+
+  .section h5 {
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+
+  .section ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  .link {
+    padding: 8px 0;
+    display: block;
+  }
+
+  .footercontainer address {
+    width: 100%;
+    max-width: 300px;
+    text-align: left;
+    margin-bottom: 2em;
+  }
+
+  .footercontainer address a {
+    font-size: 0.95rem;
+  }
+
+  .copyright {
+    font-size: 0.95em;
+    padding: 15px;
+    height: auto;
+  }
+}

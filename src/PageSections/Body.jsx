@@ -11,7 +11,7 @@ const Body = () => {
         <h2 className={Style.homebodyheader}>Specials</h2>
 
         <Link to="/Menu" className={Style.link}>
-          Orders
+          Menu
         </Link>
       </div>
 
