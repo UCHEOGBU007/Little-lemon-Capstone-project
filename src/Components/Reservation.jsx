@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Style from "../Css/Reservation.module.css";
 import Testimonies from "../PageSections/Testimonies.jsx";
 
@@ -6,7 +6,7 @@ const Reservation = () => {
   // state declaration
 
   const [reservation, setReservation] = useState({
-    Name: "",
+    name: "",
     date: "",
     guests: "",
     occasion: "",
@@ -29,17 +29,18 @@ const Reservation = () => {
         body: JSON.stringify(reservation),
       });
       if (!response.ok) {
-        throw new Error("Please wait a moment for loading...");
+        console.error("Response status:", response.status);
+        throw new Error("Failed to submit reservation.");
       }
 
       const data = await response.json();
-      console.log("Data was successfully submitted", data);
+      console.log("Data was successfully submitted", reservation);
       alert("Sucessful Reservation");
 
       // Reset form after success
 
       setReservation({
-        Name: "",
+        name: "",
         date: "",
         guests: "",
         occasion: "",
@@ -65,9 +66,14 @@ const Reservation = () => {
 
         {/* Form starts here */}
 
-        <form onSubmit={handleSubmit}>
-          <fieldset>
-            <legend>Reservation Details</legend>
+        <form
+          onSubmit={handleSubmit}
+          role="form"
+          aria-labelledby="form-title"
+          aria-describedby="form-desc"
+        >
+          <fieldset aria-labelledby="reservation-details-legend">
+            <legend id="reservation-details-legend">Reservation Details</legend>
 
             <label htmlFor="name">Name:</label>
             <input
@@ -76,9 +82,9 @@ const Reservation = () => {
               name="name"
               placeholder="Full Name"
               required
-              value={reservation.Name}
+              value={reservation.name}
               onChange={(e) =>
-                setReservation({ ...reservation, Name: e.target.value })
+                setReservation({ ...reservation, name: e.target.value })
               }
             />
 
@@ -90,6 +96,7 @@ const Reservation = () => {
               placeholder="Date"
               required
               value={reservation.date}
+              min={new Date().toISOString().split("T")[0]}
               onChange={(e) =>
                 setReservation({ ...reservation, date: e.target.value })
               }
@@ -118,7 +125,7 @@ const Reservation = () => {
                 setReservation({ ...reservation, occasion: e.target.value })
               }
             >
-              <option value="" disabled selected>
+              <option value="" disabled>
                 {" "}
                 -- Choose Occasion --{" "}
               </option>
