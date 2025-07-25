@@ -12,18 +12,26 @@ const AboutFooter = () => {
           LITTLE LEMON <br /> <span>Chicago</span>{" "}
         </h4>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipiscing elit quisque
-          faucibus ex sapien vitae pellentesque sem placerat in id cursus mi.
-          Lorem ipsum dolor sit amet consectetur adipiscing elit quisque
-          faucibus ex sapien vitae pellentesque sem placerat in id cursus mi.
-          Lorem ipsum dolor sit amet consectetur adipiscing elit quisque
-          faucibus ex sapien vitae pellentesque sem placerat in id cursus mi.
-          Lorem ipsum dolor sit amet consectetur adipiscing elit quisque
-          faucibus ex sapien vitae pellentesque sem placerat in id cursus mi.
-          Lorem ipsum dolor sit amet consectetur adipiscing elit quisque
-          faucibus ex sapien vitae pellentesque sem placerat in id cursus mi.
-          Lorem ipsum dolor sit amet consectetur adipiscing elit quisque
-          faucibus ex sapien vitae pellentesque sem placerat in id cursus mi.
+          Little Lemon is owned by two Italian brothers, Mario and Adrian, who
+          moved to the United States to pursue their shared dream of owning a
+          restaurant. To craft the menu, Mario relies on family recipes and his
+          experience as a chef in Italy.
+          <br />
+          Adrian does all the marketing for the restaurant and led the effort to
+          expand the menu beyond classic Italian to incorporate additional
+          cuisines from the Mediterranean region. Lorem ipsum dolor sit amet
+          consectetur adipiscing elit quisque faucibus ex sapien vitae
+          pellentesque sem placerat in id cursus mi. Lorem ipsum dolor sit amet
+          consectetur adipiscing elit quisque faucibus ex sapien vitae
+          pellentesque sem placerat in id cursus mi. Lorem ipsum dolor sit amet
+          consectetur adipiscing elit quisque faucibus ex sapien vitae
+          pellentesque sem placerat in id cursus mi. Lorem ipsum dolor sit amet
+          consectetur adipiscing elit quisque faucibus ex sapien vitae
+          pellentesque sem placerat in id cursus mi. Lorem ipsum dolor sit amet
+          consectetur adipiscing elit quisque faucibus ex sapien vitae
+          pellentesque sem placerat in id cursus mi. Lorem ipsum dolor sit amet
+          consectetur adipiscing elit quisque faucibus ex sapien vitae
+          pellentesque sem placerat in id cursus mi.
         </p>
       </div>
       <div className={Style.imgcontainer}>

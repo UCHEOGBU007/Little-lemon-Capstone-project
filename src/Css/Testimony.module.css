@@ -10,6 +10,12 @@
   font-size: 1.5em;
 }
 
+.TestimonyContainer > p {
+  color: #d3cfcf;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
 .Testimonycard {
   background-color: #ffffff;
   border-radius: 10px;

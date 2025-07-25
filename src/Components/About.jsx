@@ -8,6 +8,13 @@ const About = () => {
       <section className={Style.about}>
         <img src="/Mario.jpg" alt="Pictures" />
       </section>
+
+      <div className={Style.aboutheader}>
+        <h4>
+          About - <span className={Style.aboutheadersub}>us</span>{" "}
+        </h4>
+      </div>
+
       <div>
         <AboutFooter />
       </div>

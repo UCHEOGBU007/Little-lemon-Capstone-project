@@ -30,6 +30,7 @@ const Testimonies = () => {
   return (
     <div className={Style.TestimonyContainer}>
       <h3>TESTIMONIALS</h3>
+      <p>Read what others have to say about us</p>
       <Carousel partialVisible={true} responsive={responsive}>
         <div className={Style.Testimonycard}>
           <h5>Sandra</h5>
