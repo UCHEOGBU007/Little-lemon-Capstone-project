@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Styles from "../Css/Navigation.module.css";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdCancel } from "react-icons/md";
+import { CiShoppingCart } from "react-icons/ci";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -41,6 +42,13 @@ const Navigation = () => {
             </Link>
           </li>
         </ul>
+
+        <Link
+          to="/Cart"
+          style={{ color: "black", fontSize: "2em", fontWeight: "1em" }}
+        >
+          <CiShoppingCart />
+        </Link>
 
         {!isMenuOpen ? (
           <div className={Styles.openmenu} onClick={() => setIsMenuOpen(true)}>
