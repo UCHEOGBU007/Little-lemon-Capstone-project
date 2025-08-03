@@ -7,10 +7,11 @@ import { CiShoppingCart } from "react-icons/ci";
 import { useContext } from "react";
 import { CartContext } from "./ContextApi";
 
-// Calculate total quantity of all items
-
 const Navigation = () => {
   const { cartItems } = useContext(CartContext);
+
+  // Calculate total quantity of all items
+
   const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
