@@ -4,8 +4,15 @@ import Styles from "../Css/Navigation.module.css";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdCancel } from "react-icons/md";
 import { CiShoppingCart } from "react-icons/ci";
+import { useContext } from "react";
+import { CartContext } from "./ContextApi";
+
+// Calculate total quantity of all items
 
 const Navigation = () => {
+  const { cartItems } = useContext(CartContext);
+  const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -48,6 +55,7 @@ const Navigation = () => {
           style={{ color: "black", fontSize: "2em", fontWeight: "1em" }}
         >
           <CiShoppingCart />
+          <span style={{ color: "red" }}>{totalItems}</span>
         </Link>
 
         {!isMenuOpen ? (
