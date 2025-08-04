@@ -12,14 +12,21 @@ const Cart = () => {
     decreaseQuantity,
     getTotalPrice,
   } = useContext(CartContext);
+  const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
   return (
     <>
       <section className={Style.cartcontainer}>
         <div className={Style.cart}>
-          <h2>Items Selected</h2>
+          {/* The H2 will interchange text if the cart items are more than zero */}
+
+          <h2>{totalItems > 0 ? "Items selected" : "Empty Cart"}</h2>
+
+          {/* looping through the cartitems with map method for displaying items stored in the cart hook */}
+
           {cartItems.map((item) => (
             <div key={item.id} className={Style.cartitems}>
+              <span>{item.img}</span>
               {item.name} - ${item.price.value}× {item.quantity}= $
               {item.price.value * item.quantity}{" "}
               {/* span for Buttons increament and decreament */}
@@ -27,17 +34,26 @@ const Cart = () => {
                 <button onClick={() => decreaseQuantity(item.id)}>-</button>
                 {item.quantity}
                 <button onClick={() => increaseQuantity(item.id)}>+</button>
-                <button onClick={() => removeFromCart(item.id)}>Remove</button>
+                <button
+                  className={Style.removebutton}
+                  onClick={() => removeFromCart(item.id)}
+                >
+                  Remove
+                </button>
               </span>
+              <hr />
             </div>
           ))}
 
-          <button onClick={clearCart}>Clear Cart</button>
+          <button className={Style.clearbutton} onClick={clearCart}>
+            Clear Cart
+          </button>
         </div>
 
         {/* cart total price starts here  */}
 
         <div className={Style.totalprice}>
+          <h1>Amount to pay</h1>
           <h3>Total: ${getTotalPrice()}</h3>
           <button>Checkout</button>
         </div>

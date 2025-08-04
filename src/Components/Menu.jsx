@@ -8,7 +8,7 @@ const products = [
     id: 1,
     name: "Tropical Shirt",
     price: { currency: "USD", value: 39.99 },
-    img: "url-to-image.jpg",
+    img: "/Male.jpeg",
     colors: ["red", "green", "blue"],
   },
   {
