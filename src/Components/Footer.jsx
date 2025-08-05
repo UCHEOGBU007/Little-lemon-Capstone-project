@@ -5,6 +5,7 @@ import { FaFacebookF } from "react-icons/fa6";
 import { IoLogoInstagram } from "react-icons/io";
 import { FaTwitter } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa6";
+import { SiMinutemailer } from "react-icons/si";
 
 const Footer = () => {
   return (
@@ -59,10 +60,9 @@ const Footer = () => {
         <address className={Style.section}>
           <h5>CONTACTS</h5>
           <a href="tel:+1234567890">📞 +123-456-7890</a>
-          <a href="mailto:info@yourdomain.com">📧 Email Us</a>
+          {/* <a href="mailto:info@yourdomain.com">📧 Email Us</a> */}
           <div className={Style.mediaicons}>
-            <FaFacebookF /> <IoLogoInstagram /> <FaTwitter />
-            <FaLinkedinIn />
+            <FaFacebookF /> <IoLogoInstagram /> <FaLinkedinIn /> <FaTwitter />
           </div>
           <form className={Style.newsletterForm} action="" method="post">
             <input
@@ -72,7 +72,7 @@ const Footer = () => {
               className={Style.emailInput}
             />
             <button type="submit" className={Style.submitButton}>
-              Subscribe
+              Subscribe <SiMinutemailer />
             </button>
           </form>
         </address>
