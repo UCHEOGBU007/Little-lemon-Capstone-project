@@ -1,7 +1,10 @@
 import React from "react";
 import PageNotFound from "./PageNotFound.jsx";
-import { CartContext } from "./ContextApi";
-import { useContext } from "react";
+import { CartContext } from "./ContextApi"; // importing contexthook
+import { useContext } from "react"; // importing usecontext function in contexthook
+import { FaCartPlus } from "react-icons/fa"; // Add cart icon
+import Testimonies from "../PageSections/Testimonies.jsx";
+import Style from "../Css/Menu.module.css"; // importing css module file
 
 const products = [
   {
@@ -18,6 +21,97 @@ const products = [
     img: "/Salad.jpg",
     colors: ["black", "grey"],
   },
+  {
+    id: 2,
+    name: "Denim Jacket",
+    price: { currency: "USD", value: 89.99 },
+    img: "/Salad.jpg",
+    colors: ["black", "grey"],
+  },
+  {
+    id: 2,
+    name: "Denim Jacket",
+    price: { currency: "USD", value: 89.99 },
+    img: "/Salad.jpg",
+    colors: ["black", "grey"],
+  },
+  {
+    id: 2,
+    name: "Denim Jacket",
+    price: { currency: "USD", value: 89.99 },
+    img: "/Salad.jpg",
+    colors: ["black", "grey"],
+  },
+  {
+    id: 2,
+    name: "Denim Jacket",
+    price: { currency: "USD", value: 89.99 },
+    img: "/Salad.jpg",
+    colors: ["black", "grey"],
+  },
+  {
+    id: 2,
+    name: "Denim Jacket",
+    price: { currency: "USD", value: 89.99 },
+    img: "/Salad.jpg",
+    colors: ["black", "grey"],
+  },
+  {
+    id: 2,
+    name: "Denim Jacket",
+    price: { currency: "USD", value: 89.99 },
+    img: "/Salad.jpg",
+    colors: ["black", "grey"],
+  },
+  {
+    id: 2,
+    name: "Denim Jacket",
+    price: { currency: "USD", value: 89.99 },
+    img: "/Salad.jpg",
+    colors: ["black", "grey"],
+  },
+  {
+    id: 2,
+    name: "Denim Jacket",
+    price: { currency: "USD", value: 89.99 },
+    img: "/Salad.jpg",
+    colors: ["black", "grey"],
+  },
+  {
+    id: 2,
+    name: "Denim Jacket",
+    price: { currency: "USD", value: 89.99 },
+    img: "/Salad.jpg",
+    colors: ["black", "grey"],
+  },
+  {
+    id: 2,
+    name: "Denim Jacket",
+    price: { currency: "USD", value: 89.99 },
+    img: "/Salad.jpg",
+    colors: ["black", "grey"],
+  },
+  {
+    id: 1,
+    name: "Tropical Shirt",
+    price: { currency: "USD", value: 39.99 },
+    img: "/Male.jpeg",
+    colors: ["red", "green", "blue"],
+  },
+  {
+    id: 1,
+    name: "Tropical Shirt",
+    price: { currency: "USD", value: 39.99 },
+    img: "/Male.jpeg",
+    colors: ["red", "green", "blue"],
+  },
+  {
+    id: 1,
+    name: "Tropical Shirt",
+    price: { currency: "USD", value: 39.99 },
+    img: "/Male.jpeg",
+    colors: ["red", "green", "blue"],
+  },
 ];
 
 const Menu = () => {
@@ -25,19 +119,27 @@ const Menu = () => {
 
   return (
     <>
-      <section>
-        <article>
+      <h1 className={Style.Delicacies}>DELICACIES</h1>
+      <section className={Style.menucontainer}>
+        <article className={Style.menucart}>
           {products.map((item) => (
             <div key={item.id}>
               <img src={item.img} alt="products picture" />
-              <p>
-                {item.price.currency} {item.price.value}
-              </p>
-              <button onClick={() => addToCart(item)}>Add to cart</button>
+              <h4>
+                {item.name} <span>${item.price.value}</span>{" "}
+              </h4>
+              <p>Lorem ipsum dolor sit amet consectetur</p>
+              <button
+                onClick={() => addToCart(item)}
+                className={Style.cartButton}
+              >
+                <FaCartPlus /> Add to cart
+              </button>
             </div>
           ))}
         </article>
       </section>
+      <Testimonies />
     </>
   );
 };

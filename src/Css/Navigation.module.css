@@ -86,6 +86,24 @@ ul li {
   display: none;
 }
 
+.carticonlink {
+  font-size: 3.5em;
+  font-weight: 5em;
+  text-decoration: none;
+  position: relative;
+  color: #495e57;
+}
+
+.carticonlink span {
+  color: #faaa16;
+  font-size: large;
+  font-weight: bolder;
+  font-family: "Courier New", Courier, monospace;
+  position: absolute;
+  bottom: 1.8em;
+  right: 1em;
+}
+
 /* Add these styles */
 
 .menu {

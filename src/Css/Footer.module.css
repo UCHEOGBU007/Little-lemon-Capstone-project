@@ -45,6 +45,38 @@
   flex-direction: column;
 }
 
+.newsletterForm {
+  display: flex;
+  margin-top: 2em;
+}
+
+/* Email Input */
+.emailInput {
+  flex: 1;
+  padding: 0.55rem 0.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+}
+
+/* Submit Button */
+.submitButton {
+  background-color: #be8211;
+  color: #fff;
+  border: none;
+  padding: 0 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 0 4px 4px 0;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.submitButton:hover {
+  background-color: #e59412;
+}
+
 .footercontainer address a {
   margin-top: 15px;
   font-weight: bolder;
@@ -67,6 +99,30 @@
   justify-items: center;
   height: 60px;
   padding-top: 20px;
+}
+
+/* Social media icons */
+
+.mediaicons {
+  padding: 8px;
+  margin-top: 10px;
+}
+
+/* Responsive: Stack inputs on smaller screens for news letter */
+@media (max-width: 768px) {
+  .newsletterForm {
+    flex-direction: column;
+  }
+
+  .emailInput,
+  .submitButton {
+    width: 100%;
+    border-radius: 4px;
+  }
+
+  .emailInput {
+    margin-bottom: 0.75rem;
+  }
 }
 
 @media (max-width: 890px) {

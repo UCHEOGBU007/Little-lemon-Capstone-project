@@ -1,6 +1,7 @@
 import React from "react";
 import AboutFooter from "../PageSections/AboutFooter";
 import Style from "../Css/AboutComponent.module.css";
+import Testimonies from "../PageSections/Testimonies.jsx";
 
 const About = () => {
   return (
@@ -18,6 +19,7 @@ const About = () => {
       <div>
         <AboutFooter />
       </div>
+      <Testimonies />
     </>
   );
 };

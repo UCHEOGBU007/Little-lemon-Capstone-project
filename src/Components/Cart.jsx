@@ -55,7 +55,11 @@ const Cart = () => {
         <div className={Style.totalprice}>
           <h1>Amount to pay</h1>
           <h3>Total: ${getTotalPrice()}</h3>
-          <button>Checkout</button>
+          <button
+            onClick={() => alert("Still working on it to add Payment gateway")}
+          >
+            Checkout
+          </button>
         </div>
       </section>
     </>

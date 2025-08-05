@@ -1,6 +1,10 @@
 import React from "react";
 import Style from "../Css/Footer.module.css";
 import { Link } from "react-router-dom";
+import { FaFacebookF } from "react-icons/fa6";
+import { IoLogoInstagram } from "react-icons/io";
+import { FaTwitter } from "react-icons/fa6";
+import { FaLinkedinIn } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -22,7 +26,7 @@ const Footer = () => {
         </div>
 
         <nav className={Style.section}>
-          <h5>NAVIGATION</h5>
+          <h5>NAVIGATION:</h5>
           <ul>
             <li>
               <Link to="/" className={Style.link}>
@@ -56,12 +60,22 @@ const Footer = () => {
           <h5>CONTACTS</h5>
           <a href="tel:+1234567890">📞 +123-456-7890</a>
           <a href="mailto:info@yourdomain.com">📧 Email Us</a>
+          <div className={Style.mediaicons}>
+            <FaFacebookF /> <IoLogoInstagram /> <FaTwitter />
+            <FaLinkedinIn />
+          </div>
+          <form className={Style.newsletterForm} action="" method="post">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              required
+              className={Style.emailInput}
+            />
+            <button type="submit" className={Style.submitButton}>
+              Subscribe
+            </button>
+          </form>
         </address>
-
-        {/* <div className={Style.section}>
-          <h5>SOCIAL MEDIA CONTACTS</h5>
-          <p>🌐 Facebook | Instagram | Twitter</p>
-        </div> */}
       </footer>
 
       <div className={Style.copyright}>

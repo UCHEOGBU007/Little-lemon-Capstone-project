@@ -51,12 +51,10 @@ const Navigation = () => {
           </li>
         </ul>
 
-        <Link
-          to="/Cart"
-          style={{ color: "black", fontSize: "2em", fontWeight: "1em" }}
-        >
+        <Link to="/Cart" className={Styles.carticonlink}>
           <CiShoppingCart />
-          <span style={{ color: "red" }}>{totalItems}</span>
+
+          <span>{totalItems}</span>
         </Link>
 
         {!isMenuOpen ? (
