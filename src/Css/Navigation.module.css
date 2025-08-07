@@ -48,11 +48,10 @@ ul li {
 }
 
 .link:hover {
-  color: #faaa16;
-  background: #333333;
-  padding: 5px;
-  /* color: linear-gradient(135deg, #faaa16, #face14); */
-  border-radius: 5px;
+  text-decoration: underline;
+  text-decoration-color: #be8211; /* Little Lemon's accent color */
+  text-decoration-thickness: 2px;
+  color: #be8211;
 }
 
 .order {

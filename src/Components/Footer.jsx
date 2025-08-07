@@ -13,17 +13,6 @@ const Footer = () => {
       <footer className={Style.footercontainer}>
         <div>
           <img src="/Logofooter1.png" alt="Logo" className={Style.logo} />
-          {/* <form action="">
-            <label htmlFor="newletter"> News Leter :</label>
-            <br />
-            <input
-              type="email"
-              id="email"
-              name="newletter"
-              placeholder="Suscribe"
-            />
-            <input type="submit" />
-          </form> */}
         </div>
 
         <nav className={Style.section}>

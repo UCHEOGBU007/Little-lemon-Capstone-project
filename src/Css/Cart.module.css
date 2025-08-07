@@ -1,10 +1,28 @@
+/* Basket illustration styling */
+.basket {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  background-color: #f9f9f9;
+  /* margin-top: 2em; */
+}
+
+.basket h1 {
+  font-size: 4em;
+  font-weight: 5em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-family: cursive, sans-serif, "Trebuchet MS", "Lucida Sans Unicode",
+    "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
 /* Layout container */
 .cartcontainer {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2.5rem;
   padding: 2rem;
-  background-color: #f9f9f9;
+  /* background-color: #f9f9f9; */
 }
 
 @media (min-width: 768px) {
@@ -36,7 +54,6 @@
 .cartitems {
   display: flex;
   flex-direction: column;
-  background-color: #f0f0f0;
   margin-bottom: 1rem;
   padding: 1rem;
   border-radius: 6px;
@@ -97,30 +114,27 @@
 
 /* Total price section */
 .totalprice {
-  background-color: #d5c1c1d3;
+  background-color: #f0f0f0;
   border: 2px solid #73620e;
   border-radius: 8px;
   max-height: fit-content;
   padding: 1.5rem;
-  text-align: center;
+  text-align: left;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* .totalprice:hover {
-  box-shadow: 8px 15px 30px 40px rgba(40, 38, 38, 0.1);
-} */
-
 .totalprice h1 {
   color: #73620e;
-  text-decoration: underline;
 }
 
-.totalprice h3 {
-  font-size: 1.5rem;
+.totalprice h5 {
   margin-bottom: 1rem;
   color: #333;
-  padding: 20px;
-  margin: 20px;
+  margin-top: 2em;
+}
+
+.totalprice h5 span {
+  float: right;
 }
 
 .totalprice button {

@@ -33,9 +33,10 @@
 }
 
 .link:hover {
-  color: #faaa16;
-  background: #333333;
-  border-radius: 5px;
+  text-decoration: underline;
+  text-decoration-color: #be8211; /* Little Lemon's accent color */
+  text-decoration-thickness: 2px;
+  color: #be8211;
 }
 
 /*Footer contacts Styling starts here */
@@ -103,10 +104,34 @@
 
 /* Social media icons */
 
-.mediaicons {
+.mediaicons svg {
+  width: 30px;
+  height: 30px;
+  margin-top: 15px;
   padding: 8px;
-  margin-top: 10px;
+  border-radius: 50%;
+  color: white;
+  transition: transform 0.3s ease;
 }
+
+.mediaicons svg:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* Specific brand colors */
+.mediaicons svg:nth-child(1) {
+  background-color: #1877f2;
+} /* Facebook */
+.mediaicons svg:nth-child(2) {
+  background-color: #e4405f;
+} /* Instagram */
+.mediaicons svg:nth-child(3) {
+  background-color: #0a66c2;
+} /* LinkedIn */
+.mediaicons svg:nth-child(4) {
+  background-color: #1da1f2;
+} /* Twitter */
 
 /* Responsive: Stack inputs on smaller screens for news letter */
 @media (max-width: 768px) {
@@ -132,6 +157,7 @@
     height: auto;
     padding: 2em 1em;
     text-align: left;
+    margin: 0;
   }
 
   .footercontainer img {
@@ -158,7 +184,6 @@
     margin-bottom: 2em;
     width: 100%;
     max-width: 300px;
-    text-align: left;
   }
 
   .section h5 {
@@ -169,6 +194,7 @@
   .section ul {
     padding: 0;
     margin: 0;
+    float: left;
   }
 
   .link {
@@ -181,6 +207,10 @@
     max-width: 300px;
     text-align: left;
     margin-bottom: 2em;
+  }
+
+  .mediaicons {
+    float: left;
   }
 
   .footercontainer address a {

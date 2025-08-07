@@ -16,6 +16,9 @@ const Cart = () => {
 
   return (
     <>
+      <section className={Style.basket}>
+        <h1>MY Cart</h1>
+      </section>
       <section className={Style.cartcontainer}>
         <div className={Style.cart}>
           {/* The H2 will interchange text if the cart items are more than zero */}
@@ -32,13 +35,16 @@ const Cart = () => {
               {/* span for Buttons increament and decreament */}
               <span className={Style.cartquantity}>
                 <button onClick={() => decreaseQuantity(item.id)}>-</button>
-                {item.quantity}
+
+                <span style={{ marginTop: "12px", fontWeight: "bolder" }}>
+                  {item.quantity}
+                </span>
                 <button onClick={() => increaseQuantity(item.id)}>+</button>
                 <button
                   className={Style.removebutton}
                   onClick={() => removeFromCart(item.id)}
                 >
-                  Remove
+                  X Remove
                 </button>
               </span>
               <hr />
@@ -53,8 +59,11 @@ const Cart = () => {
         {/* cart total price starts here  */}
 
         <div className={Style.totalprice}>
-          <h1>Amount to pay</h1>
-          <h3>Total: ${getTotalPrice()}</h3>
+          <h1>Cart Summary</h1>
+          <hr />
+          <h5>
+            Order Total: <span>${getTotalPrice()}</span>{" "}
+          </h5>
           <button
             onClick={() => alert("Still working on it to add Payment gateway")}
           >
