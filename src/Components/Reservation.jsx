@@ -14,6 +14,7 @@ const Reservation = () => {
     seating: "",
     email: "",
     phone: "",
+    time: "",
   });
 
   /*  post data using asyn api fetch function */
@@ -35,7 +36,7 @@ const Reservation = () => {
       }
 
       const data = await response.json();
-      console.log("Data was successfully submitted", reservation);
+      console.log("Data was successfully submitted", data);
       alert("Sucessful Reservation");
 
       // Reset form after success
@@ -48,6 +49,7 @@ const Reservation = () => {
         seating: "",
         email: "",
         phone: "",
+        time: "",
       });
     } catch (error) {
       console.error("Error submitting reservation:", error);
@@ -85,6 +87,7 @@ const Reservation = () => {
                 Reservation Details
               </legend>
 
+              {/* name input */}
               <label htmlFor="name">Name:</label>
               <input
                 type="text"
@@ -97,6 +100,8 @@ const Reservation = () => {
                   setReservation({ ...reservation, name: e.target.value })
                 }
               />
+
+              {/* date input */}
 
               <label htmlFor="date">Date:</label>
               <input
@@ -112,6 +117,7 @@ const Reservation = () => {
                 }
               />
 
+              {/* guest input */}
               <label htmlFor="guests">Number of Guests:</label>
               <input
                 type="number"
@@ -126,6 +132,7 @@ const Reservation = () => {
                 }
               />
 
+              {/* occasion input */}
               <label htmlFor="Event">Occasion:</label>
               <select
                 name="Events"
@@ -144,7 +151,21 @@ const Reservation = () => {
                 <option value="Meeting">Meeting</option>
                 <option value="Hangouts">Hangouts</option>
               </select>
+
+              {/* Time input */}
+              <label htmlFor="time">Time:</label>
+              <input
+                type="time"
+                value={reservation.time}
+                required
+                onChange={(e) =>
+                  setReservation({ ...reservation, time: e.target.value })
+                }
+              />
               <br />
+
+              {/* dining input */}
+
               <div className={Style.radiobox}>
                 <label htmlFor="seating">Indoor:</label>
                 <input
@@ -172,6 +193,7 @@ const Reservation = () => {
               </div>
             </fieldset>
 
+            {/* customer information input */}
             <fieldset>
               <legend>Contact Info</legend>
 

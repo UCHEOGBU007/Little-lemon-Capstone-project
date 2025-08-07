@@ -25,27 +25,47 @@ const Navigation = () => {
 
         <ul className={`${Styles.menu} ${isMenuOpen ? Styles.show : ""}`}>
           <li>
-            <Link to="/" className={Styles.link}>
+            <Link
+              to="/"
+              className={Styles.link}
+              onClick={() => setIsMenuOpen(false)}
+            >
               HOME
             </Link>
           </li>
           <li>
-            <Link to="/About" className={Styles.link}>
+            <Link
+              to="/About"
+              className={Styles.link}
+              onClick={() => setIsMenuOpen(false)}
+            >
               ABOUT
             </Link>
           </li>
           <li>
-            <Link to="/Menu" className={Styles.link}>
+            <Link
+              to="/Menu"
+              className={Styles.link}
+              onClick={() => setIsMenuOpen(false)}
+            >
               MENU
             </Link>
           </li>
           <li>
-            <Link to="/Reservation" className={Styles.link}>
+            <Link
+              to="/Reservation"
+              className={Styles.link}
+              onClick={() => setIsMenuOpen(false)}
+            >
               RESERVATION
             </Link>
           </li>
           <li>
-            <Link to="/Order" className={Styles.order}>
+            <Link
+              to="/Order"
+              className={Styles.order}
+              onClick={() => setIsMenuOpen(false)}
+            >
               ONLINE-ORDER
             </Link>
           </li>

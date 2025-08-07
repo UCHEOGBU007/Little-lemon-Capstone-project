@@ -45,10 +45,17 @@ export const CartProvider = ({ children }) => {
   };
 
   // inside CartProvider, after all cart functions
+  // const getTotalPrice = () => {
+  //   return cartItems.reduce((total, item) => {
+  //     return total + item.price.value * item.quantity;
+  //   }, 0);
+  // };
+
   const getTotalPrice = () => {
-    return cartItems.reduce((total, item) => {
-      return total + item.price.value * item.quantity;
+    const total = cartItems.reduce((sum, item) => {
+      return sum + item.price.value * item.quantity;
     }, 0);
+    return parseFloat(total.toFixed(2));
   };
 
   return (

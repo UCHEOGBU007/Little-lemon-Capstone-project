@@ -25,6 +25,28 @@
   /* background-color: #f9f9f9; */
 }
 
+.cartitempictures {
+  display: flex;
+
+  font-size: 1em;
+  padding: 20px;
+}
+
+.cartitempictures span {
+  margin: 2em 0 0 2em;
+  font-size: 1.3em;
+  font-weight: 1em;
+}
+
+.cartimage {
+  width: 80px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-right: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
 @media (min-width: 768px) {
   .cartcontainer {
     grid-template-columns: 2fr 1fr;

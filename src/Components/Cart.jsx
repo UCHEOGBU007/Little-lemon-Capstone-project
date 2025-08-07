@@ -29,9 +29,18 @@ const Cart = () => {
 
           {cartItems.map((item) => (
             <div key={item.id} className={Style.cartitems}>
-              <span>{item.img}</span>
-              {item.name} - ${item.price.value}× {item.quantity}= $
-              {item.price.value * item.quantity}{" "}
+              <div className={Style.cartitempictures}>
+                <img
+                  src={item.img}
+                  alt={item.name}
+                  className={Style.cartimage}
+                />
+                <span>
+                  {item.name} - ${item.price.value} × {item.quantity}= $
+                  {item.price.value * item.quantity}{" "}
+                </span>
+              </div>
+
               {/* span for Buttons increament and decreament */}
               <span className={Style.cartquantity}>
                 <button onClick={() => decreaseQuantity(item.id)}>-</button>
