@@ -10,6 +10,14 @@
   text-decoration: wavy;
 }
 
+.backgrounddesign {
+  height: 6rem;
+  background-image: url("/src/assets/Menu.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .menucontainer {
   padding: 2rem;
   display: flex;

@@ -119,6 +119,7 @@ const Menu = () => {
 
   return (
     <>
+      <article className={Style.backgrounddesign}>.</article>
       <h1 className={Style.Delicacies}>DELICACIES</h1>
       <section className={Style.menucontainer}>
         <article className={Style.menucart}>
