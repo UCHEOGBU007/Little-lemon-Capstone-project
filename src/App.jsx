@@ -15,7 +15,6 @@ function App() {
   return (
     <CartProvider>
       <BrowserRouter>
-        {/* <div> */}
         <Navigation />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -28,7 +27,6 @@ function App() {
         </Routes>
         <br />
         <Footer />
-        {/* </div> */}
       </BrowserRouter>
     </CartProvider>
   );
