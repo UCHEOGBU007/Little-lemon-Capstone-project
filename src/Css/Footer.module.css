@@ -1,6 +1,11 @@
 .footercontainer {
   height: 260px;
-  background-color: #d9d9d9;
+  /* background-color: #d9d9d9; */
+  background-image: url("/src/assets/Footerbackground6.jpg");
+  background-position: center;
+  color: #eeeeee;
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   text-align: center;
   justify-content: space-between;
@@ -15,7 +20,7 @@
 .section h5 {
   font-size: larger;
   font-weight: bolder;
-  color: #333333;
+  /* color: #333333; */
 }
 
 .section ul {
@@ -27,7 +32,8 @@
 
 .link {
   text-decoration: none;
-  color: #495e57;
+  /* color: #495e57; */
+  color: #eeeeee;
   margin-left: 5px;
   padding: 5px;
 }
@@ -81,7 +87,7 @@
 .footercontainer address a {
   margin-top: 15px;
   font-weight: bolder;
-  color: #495e57;
+  /* color: #495e57; */
   text-decoration: none;
 }
 

@@ -47,7 +47,7 @@ const Footer = () => {
         </nav>
 
         <address className={Style.section}>
-          <h5>CONTACTS</h5>
+          <h5>CONTACTS:</h5>
           <a href="tel:+1234567890">📞 +123-456-7890</a>
           {/* <a href="mailto:info@yourdomain.com">📧 Email Us</a> */}
           <div className={Style.mediaicons}>

@@ -1,5 +1,9 @@
 .TestimonyContainer {
-  background: #495e57;
+  /* background: #495e57; */
+  background-image: url("/src/assets/Testimoniebackground.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   text-align: center;
   margin-top: 4em;
   padding: 2em;

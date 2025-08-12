@@ -1,7 +1,12 @@
 /* Base styling for main hero section */
 .hero {
-  background: #495e58;
-  width: 100%;
+  /* background: #495e58; */
+  background-color: transparent;
+  background-image: url("/src/assets/Herobackground3.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* width: 100%; */
   padding: 40px 20px;
   display: flex;
   justify-content: space-between;
