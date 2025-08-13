@@ -156,11 +156,22 @@ const Reservation = () => {
               <label htmlFor="time">Time:</label>
               <input
                 type="time"
+                id="time"
                 value={reservation.time}
+                min="10:00"
+                max="22:00"
                 required
                 onChange={(e) =>
                   setReservation({ ...reservation, time: e.target.value })
                 }
+                onInvalid={(e) => {
+                  e.target.setCustomValidity(
+                    "Please select a time between 10:00 AM and 10:00 PM."
+                  );
+                }}
+                onInput={(e) => {
+                  e.target.setCustomValidity(""); // Clear message on input
+                }}
               />
               <br />
 

@@ -1,6 +1,6 @@
 /* designing the header links  */
 
-.link {
+/* .link {
   color: #333333;
   background: linear-gradient(135deg, #faaa16, #face14);
   padding: 10px;
@@ -9,6 +9,35 @@
   font-size: 2em;
   border: none;
   border-radius: 10px;
+}
+
+.icon {
+  display: flex;
+}
+
+.link:hover {
+  color: #faaa16;
+  background: #333333;
+} */
+
+.link {
+  color: #333333;
+  background: linear-gradient(135deg, #faaa16, #face14);
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 10px;
+  display: inline-block;
+  transition: background 0.3s ease, color 0.3s ease;
+  white-space: nowrap; /* prevents wrapping but can be removed if needed */
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* spacing between text and icon */
 }
 
 .link:hover {
@@ -125,5 +154,14 @@
 @media (max-width: 720px) {
   .container {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .link {
+    font-size: 1em;
+    padding: 8px 16px;
+  }
+
+  .icon {
+    gap: 6px;
   }
 }

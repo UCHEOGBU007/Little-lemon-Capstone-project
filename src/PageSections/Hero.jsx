@@ -1,5 +1,7 @@
 import React from "react";
 import Style from "../Css/Hero.module.css";
+import { CiCalendarDate } from "react-icons/ci";
+
 import { Link } from "react-router-dom";
 
 const Hero = () => {
@@ -24,11 +26,13 @@ const Hero = () => {
 
         {/* Reserve a table button  */}
 
-        <button>
-          {" "}
+        <button className={Style.reserveButton}>
           <Link to="/Reservation" className={Style.button}>
-            Reserve a table
-          </Link>{" "}
+            <span className={Style.buttonContent}>
+              Reserve a table
+              <CiCalendarDate />
+            </span>
+          </Link>
         </button>
       </div>
 

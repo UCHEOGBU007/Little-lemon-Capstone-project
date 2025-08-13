@@ -11,8 +11,16 @@ const Body = () => {
         <h2 className={Style.homebodyheader}>Specials</h2>
 
         <Link to="/Menu" className={Style.link}>
-          Menu
+          <span className={Style.icon}>
+            <span>Menu</span>
+            <FaArrowRight />
+          </span>
         </Link>
+
+        {/* <Link to="/Menu" className={Style.link}>
+        <span className={Style.icon}>Menu <FaArrowRight /></span>
+          
+        </Link> */}
       </div>
 
       {/* Card container starts here */}

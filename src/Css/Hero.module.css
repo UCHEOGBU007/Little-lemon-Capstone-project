@@ -39,25 +39,44 @@
   font-weight: bold;
 }
 
-.herotext button {
+/* Styling reservation button oin hero section*/
+
+.reserveButton {
   background: linear-gradient(135deg, #faaa16, #face14);
   margin-top: 30px;
   border: none;
   padding: 10px 20px;
   border-radius: 8px;
   cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.reserveButton:hover {
+  background: #495e58;
 }
 
 .button {
   text-decoration: none;
   color: #495e58;
   font-weight: bolder;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 3px;
+  transition: color 0.3s ease;
 }
 
-.herotext .button:hover {
-  background: #495e58;
+.reserveButton:hover .button {
   color: #faaa16;
 }
+
+.buttonContent {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Styling the hero image starts here */
 
 .heroimage {
   transform: translateY(-41px);
@@ -109,5 +128,6 @@
     width: 100%;
     max-width: 100%;
     border-radius: 12px;
+    display: none;
   }
 }
