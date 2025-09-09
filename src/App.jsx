@@ -25,7 +25,7 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
-        <br />
+        
         <Footer />
       </BrowserRouter>
     </CartProvider>
